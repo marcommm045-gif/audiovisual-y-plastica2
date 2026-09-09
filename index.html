@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyecto Audiovisual y Plástica</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Nuestro CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         BARRA DE NAVEGACIÓN
+    ========================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="#inicio">
+                Proyecto Audiovisual y Plástica
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menú"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Galería</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quienes-somos">
+                            Quiénes somos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#destacados">
+                            Trabajos destacados
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- =========================
+         INICIO
+    ========================== -->
+
+    <header id="inicio" class="hero">
+
+        <div class="hero-overlay">
+
+            <div class="container text-center">
+
+                <h1>
+                    Proyecto Audiovisual y Plástica
+                </h1>
+
+                <p class="hero-subtitle">
+                    Un espacio para compartir nuestra creatividad,
+                    nuestras ideas y nuestros trabajos.
+                </p>
+
+                <a href="#galeria" class="btn btn-primary btn-lg">
+                    Nuestros trabajos
+                    <i class="bi bi-arrow-down"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         GALERÍA
+    ========================== -->
+
+    <section id="galeria" class="section">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <h2>Galería</h2>
+
+                <p>
+                    Una selección de los trabajos realizados
+                    durante el curso.
+                </p>
+
+            </div>
+
+            <!--
+                Los trabajos se generarán posteriormente
+                mediante JavaScript.
+            -->
+
+            <div
+                id="galeria-trabajos"
+                class="row g-4"
+            >
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUIÉNES SOMOS
+    ========================== -->
+
+    <section id="quienes-somos" class="section section-alt">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <h2>Quiénes somos</h2>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-9">
+
+                    <p class="lead text-center">
+
+                        Somos una clase de tercero de la ESO,
+                        la cual eligió esta optativa de
+                        audiovisual y plástica por su amor
+                        al arte y a la expresividad.
+
+                    </p>
+
+                    <div class="about-content">
+
+                        <h3>Sobre la asignatura</h3>
+
+                        <p>
+                            En esta asignatura trabajamos diferentes
+                            formas de expresión artística y audiovisual,
+                            utilizando la creatividad como herramienta
+                            para desarrollar nuestras propias ideas.
+                        </p>
+
+                        <h3>¿Qué trabajamos durante el curso?</h3>
+
+                        <div class="row g-4 mt-2">
+
+                            <div class="col-md-6">
+                                <div class="about-card">
+                                    <i class="bi bi-palette"></i>
+                                    <h4>Expresión artística</h4>
+                                    <p>
+                                        Exploramos diferentes técnicas
+                                        y formas de expresión plástica.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="about-card">
+                                    <i class="bi bi-camera"></i>
+                                    <h4>Audiovisual</h4>
+                                    <p>
+                                        Trabajamos con imágenes,
+                                        fotografía y diferentes
+                                        recursos audiovisuales.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="about-card">
+                                    <i class="bi bi-lightbulb"></i>
+                                    <h4>Creatividad</h4>
+                                    <p>
+                                        Desarrollamos ideas propias
+                                        y buscamos nuevas formas
+                                        de comunicar.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="about-card">
+                                    <i class="bi bi-people"></i>
+                                    <h4>Trabajo en equipo</h4>
+                                    <p>
+                                        Aprendemos a colaborar y a
+                                        desarrollar proyectos juntos.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TRABAJOS DESTACADOS
+    ========================== -->
+
+    <section id="destacados" class="section">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <h2>
+                    <i class="bi bi-star-fill"></i>
+                    Trabajos destacados
+                </h2>
+
+                <p>
+                    Los trabajos que han obtenido una
+                    calificación de 9 o superior.
+                </p>
+
+            </div>
+
+            <!--
+                JavaScript colocará aquí automáticamente
+                los trabajos con nota >= 9.
+            -->
+
+            <div
+                id="trabajos-destacados"
+                class="row g-4"
+            >
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-0">
+                Proyecto Audiovisual y Plástica · 3.º ESO
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Nuestro JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

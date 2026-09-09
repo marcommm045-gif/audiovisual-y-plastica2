@@ -1,0 +1,650 @@
+
+
+/* =========================================================
+   PROYECTO AUDIOVISUAL Y PLÁSTICA
+   Hoja de estilos principal
+   ========================================================= */
+
+
+/* =========================================================
+   1. VARIABLES
+   ========================================================= */
+
+:root {
+    --color-fondo: #0b0b0f;
+    --color-fondo-secundario: #14141a;
+    --color-superficie: #1b1b23;
+    --color-texto: #ffffff;
+    --color-texto-secundario: #b8b8c2;
+    --color-acento: #7c5cff;
+    --color-acento-hover: #6848e8;
+    --color-borde: rgba(255, 255, 255, 0.1);
+
+    --radio: 16px;
+    --transicion: 0.3s ease;
+}
+
+
+/* =========================================================
+   2. CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* Selección de texto */
+
+::selection {
+    background-color: var(--color-acento);
+    color: white;
+}
+
+
+/* Enlaces */
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   3. BARRA DE NAVEGACIÓN
+   ========================================================= */
+
+.navbar {
+    background: rgba(11, 11, 15, 0.85);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--color-borde);
+
+    padding: 15px 0;
+
+    transition: var(--transicion);
+}
+
+
+/* Nombre de la página */
+
+.navbar-brand {
+    color: var(--color-texto) !important;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    transition: var(--transicion);
+}
+
+.navbar-brand:hover {
+    color: var(--color-acento) !important;
+}
+
+
+/* Enlaces */
+
+.navbar .nav-link {
+    color: var(--color-texto-secundario) !important;
+
+    margin-left: 10px;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    transition: var(--transicion);
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-texto) !important;
+}
+
+
+/* Botón del menú móvil */
+
+.navbar-toggler {
+    border: 1px solid var(--color-borde);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   4. INICIO / HERO
+   ========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url("img/fondo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Capa sobre la imagen */
+
+.hero-overlay {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Título */
+
+.hero h1 {
+    max-width: 1000px;
+
+    margin: 0 auto 25px;
+
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+
+/* Subtítulo */
+
+.hero-subtitle {
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    color: #dddddf;
+
+    font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+
+/* Botón principal */
+
+.hero .btn {
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 50px;
+
+    background-color: var(--color-acento);
+
+    font-weight: 600;
+
+    transition:
+        transform var(--transicion),
+        background-color var(--transicion),
+        box-shadow var(--transicion);
+}
+
+.hero .btn:hover {
+    background-color: var(--color-acento-hover);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 30px rgba(124, 92, 255, 0.3);
+}
+
+.hero .btn i {
+    margin-left: 8px;
+}
+
+
+/* =========================================================
+   5. SECCIONES
+   ========================================================= */
+
+.section {
+    padding: 110px 0;
+}
+
+.section-alt {
+    background-color: var(--color-fondo-secundario);
+}
+
+
+/* Títulos de sección */
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    margin-bottom: 15px;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    font-weight: 750;
+
+    letter-spacing: -1px;
+}
+
+.section-title p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: var(--color-texto-secundario);
+
+    font-size: 1.05rem;
+}
+
+
+/* Icono de destacados */
+
+.section-title h2 .bi-star-fill {
+    color: #ffd54a;
+
+    margin-right: 8px;
+}
+
+
+/* =========================================================
+   6. GALERÍA
+   ========================================================= */
+
+#galeria-trabajos {
+    margin-top: 20px;
+}
+
+
+/* Tarjeta de trabajo */
+
+.trabajo-card {
+    height: 100%;
+
+    overflow: hidden;
+
+    background-color: var(--color-superficie);
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: var(--radio);
+
+    transition:
+        transform var(--transicion),
+        box-shadow var(--transicion),
+        border-color var(--transicion);
+}
+
+.trabajo-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(124, 92, 255, 0.5);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Imagen */
+
+.trabajo-card img {
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.trabajo-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Información debajo de la imagen */
+
+.trabajo-info {
+    padding: 22px;
+}
+
+
+/* Nombre */
+
+.trabajo-info h3 {
+    margin-bottom: 12px;
+
+    font-size: 1.3rem;
+
+    font-weight: 700;
+}
+
+
+/* Información */
+
+.trabajo-info p {
+    margin: 5px 0;
+
+    color: var(--color-texto-secundario);
+
+    font-size: 0.95rem;
+}
+
+
+/* Tipo de trabajo */
+
+.trabajo-tipo {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 5px 12px;
+
+    border-radius: 50px;
+
+    background-color: rgba(124, 92, 255, 0.12);
+
+    color: #b9aaff;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   7. QUIÉNES SOMOS
+   ========================================================= */
+
+.about-content {
+    margin-top: 50px;
+}
+
+.about-content h3 {
+    margin-top: 45px;
+    margin-bottom: 15px;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+}
+
+.about-content > p {
+    color: var(--color-texto-secundario);
+
+    font-size: 1rem;
+}
+
+
+/* Texto principal */
+
+.lead {
+    color: #e5e5e8 !important;
+
+    font-size: 1.25rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   8. TARJETAS DE LA ASIGNATURA
+   ========================================================= */
+
+.about-card {
+    height: 100%;
+
+    padding: 30px;
+
+    background-color: var(--color-superficie);
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: var(--radio);
+
+    transition:
+        transform var(--transicion),
+        border-color var(--transicion);
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(124, 92, 255, 0.45);
+}
+
+
+/* Iconos */
+
+.about-card > i {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--color-acento);
+
+    font-size: 2rem;
+}
+
+
+/* Título */
+
+.about-card h4 {
+    margin-bottom: 10px;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+}
+
+
+/* Descripción */
+
+.about-card p {
+    margin: 0;
+
+    color: var(--color-texto-secundario);
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   9. TRABAJOS DESTACADOS
+   ========================================================= */
+
+#destacados {
+    background-color: var(--color-fondo);
+}
+
+
+/* Destacados */
+
+#trabajos-destacados {
+    margin-top: 20px;
+}
+
+
+/* Destacado con nota */
+
+.destacado-card {
+    position: relative;
+}
+
+
+/* Insignia de nota */
+
+.nota-destacada {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    z-index: 2;
+
+    padding: 7px 12px;
+
+    border-radius: 50px;
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    color: #ffd54a;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   10. FOOTER
+   ========================================================= */
+
+.footer {
+    padding: 35px 0;
+
+    background-color: #08080b;
+
+    border-top: 1px solid var(--color-borde);
+
+    color: var(--color-texto-secundario);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   11. ANIMACIONES
+   ========================================================= */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hero h1 {
+    animation: aparecer 0.8s ease forwards;
+}
+
+.hero-subtitle {
+    animation: aparecer 0.8s ease 0.15s forwards;
+
+    opacity: 0;
+}
+
+.hero .btn {
+    animation: aparecer 0.8s ease 0.3s forwards;
+
+    opacity: 0;
+}
+
+
+/* =========================================================
+   12. RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .navbar .nav-link {
+        margin-left: 0;
+
+        padding: 10px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        margin-bottom: 45px;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero-overlay {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .trabajo-card img {
+        height: 240px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero .btn {
+        padding: 11px 20px;
+
+        font-size: 0.95rem;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .about-card {
+        padding: 25px;
+    }
+
+}
+
