@@ -14,7 +14,7 @@ const trabajos = [
         autores: "Grupo 1",
         tipo: "Plástica",
         nota: 9.5,
-        imagen: "img/1.jpg"
+        imagen: "1.jpg"
     },
 
     {
@@ -22,7 +22,7 @@ const trabajos = [
         autores: "Grupo 2",
         tipo: "Fotografía",
         nota: 8.5,
-        imagen: "img/2.jpg"
+        imagen: "2.jpg"
     },
 
     {
@@ -30,7 +30,7 @@ const trabajos = [
         autores: "Grupo 3",
         tipo: "Audiovisual",
         nota: 9.2,
-        imagen: "img/3.jpg"
+        imagen: "3.jpg"
     }
 ];
 
